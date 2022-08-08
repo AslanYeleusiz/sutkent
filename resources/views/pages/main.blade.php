@@ -10,12 +10,21 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
+                <div class="carousel-title">
+                    Сыры терең,<br>бірлігі ерен Сүткент
+                </div>
                 <img src="{{asset('images/slide/1.jpg')}}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
+               <div class="carousel-title">
+                    Сүткент, сүт мекенiм –<br>қалашығым
+                </div>
                 <img src="{{asset('images/slide/2.jpg')}}" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
+               <div class="carousel-title">
+                    Бабалар өткен кешегi,<br>Құт қонған мекен деседi
+                </div>
                 <img src="{{asset('images/slide/3.jpg')}}" class="d-block w-100" alt="...">
             </div>
         </div>
@@ -91,7 +100,7 @@
                 </div>
 
             </div>
-            <a href="#" class="next">
+            <a href="{{ LaravelLocalization::localizeUrl('/zhanalyqtar') }}" class="next">
                 <button class="btn glassBtn">
                     @lang('site.Барлық жаңалықтарға өту')
                 </button>
@@ -122,32 +131,32 @@
             <div class="h">@lang('site.Бейнероликтер')</div>
             <div class="wrap">
                 <a href="#">
-                <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/about/2.jpg);" class="video_block aj-c">
-                    <div class="title">
-                        Ауыл тойы айырықша өтті
+                    <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/about/2.jpg);" class="video_block aj-c">
+                        <div class="title">
+                            Ауыл тойы айырықша өтті
+                        </div>
+                        <img src="{{asset('images/youtube.svg')}}" alt="">
                     </div>
-                    <img src="{{asset('images/youtube.svg')}}" alt="">
-                </div>
-            </a>
-               <a href="#">
-                <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/about/2.jpg);" class="video_block aj-c">
-                    <div class="title">
-                        Ауыл тойы айырықша өтті
+                </a>
+                <a href="#">
+                    <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/about/2.jpg);" class="video_block aj-c">
+                        <div class="title">
+                            Ауыл тойы айырықша өтті
+                        </div>
+                        <img src="{{asset('images/youtube.svg')}}" alt="">
                     </div>
-                    <img src="{{asset('images/youtube.svg')}}" alt="">
-                </div>
-            </a>
-               <a href="#">
-                <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/about/2.jpg);" class="video_block aj-c">
-                    <div class="title">
-                        Ауыл тойы айырықша өтті
+                </a>
+                <a href="#">
+                    <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/about/2.jpg);" class="video_block aj-c">
+                        <div class="title">
+                            Ауыл тойы айырықша өтті
+                        </div>
+                        <img src="{{asset('images/youtube.svg')}}" alt="">
                     </div>
-                    <img src="{{asset('images/youtube.svg')}}" alt="">
-                </div>
-            </a>
+                </a>
             </div>
             <div class="next">
-                <a href="#">
+                <a href="{{LaravelLocalization::localizeUrl('/videos')}}">
                     <button class="btn glassBtn">
                         @lang('site.Барлық бейнероликтерге өту')
                     </button>

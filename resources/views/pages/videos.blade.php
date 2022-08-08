@@ -4,11 +4,11 @@
 <section class="video">
     <div class="container">
         <div class="hleb">
-            @lang('site.Басты бет') / @lang('site.Бейнероликтер') / page 1
+            <a href="{{ LaravelLocalization::localizeUrl('/') }}">@lang('site.Басты бет')</a> / @lang('site.Бейнероликтер') / page 1
         </div>
         <div class="h">@lang('site.Бейнероликтер')</div>
         <div class="wrap">
-            <a href="#">
+            <a href="{{ LaravelLocalization::localizeUrl('/video') }}">
                 <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/about/2.jpg);" class="video_block aj-c">
                     <div class="title">
                         Ауыл тойы айырықша өтті

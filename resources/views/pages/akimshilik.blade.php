@@ -3,7 +3,9 @@
 
 <section class="akim">
     <div class="container">
-        <div class="hleb">@lang('site.Басты бет') / @lang('site.Ауыл туралы') / @lang('site.Әкімшілік') </div>
+        <div class="hleb">
+            <a href="{{ LaravelLocalization::localizeUrl('/') }}">@lang('site.Басты бет')</a> / <a href="{{ LaravelLocalization::localizeUrl('/auyl') }}">@lang('site.Ауыл туралы')</a> / @lang('site.Әкімшілік')
+        </div>
         <div class="h">@lang('site.Әкімшілік')</div>
         <div class="ab">@lang('site.Әкімшілік жайлы')</div>
         <div class="desc">

@@ -3,7 +3,7 @@
 <section class="zhanalyq">
     <div class="container">
         <div class="hleb">
-            @lang('site.Басты бет') / @lang('site.Ауыл жайлы')
+            <a href="{{ LaravelLocalization::localizeUrl('/') }}">@lang('site.Басты бет')</a> / <a href="{{ LaravelLocalization::localizeUrl('/zhanalyqtar') }}">@lang('site.Жаңалықтар')</a> / Шаруагерлер бағаны тұрақтандыруға атсалысуы керек
         </div>
         <div class="h">
             Шаруагерлер бағаны тұрақтандыруға атсалысуы керек

@@ -18,7 +18,7 @@
 <div class="header">
     <div class="container">
         <div class="wrap">
-            <img class="logo" src="{{asset('images/mainLogo.svg')}}" alt="">
+            <a href="{{ LaravelLocalization::localizeUrl('/') }}"><img class="logo" src="{{asset('images/mainLogo.svg')}}" alt=""></a>
             <div class="links">
                 <a class="link-item" href="{{ LaravelLocalization::localizeUrl('/') }}">@lang('site.Басты бет')</a>
                 <div class="dropdown">
@@ -27,15 +27,38 @@
                         <img src="{{asset('images/treugolnik.svg')}}" alt="">
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl('/akimshilik') }}">@lang('site.Әкімшілік')</a></li>
-                        <li><a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl('/kenes') }}">@lang('site.Ардагерлер кеңесі')</a></li>
-                        <li><a class="dropdown-item" href="#">@lang('site.Қоғамдық мүшелері')</a></li>
-                        <li><a class="dropdown-item" href="#">@lang('site.Аналар кеңесі')</a></li>
-                        <li><a class="dropdown-item" href="#">@lang('site.Медиатор')</a></li>
-                        <li><a class="dropdown-item" href="#">@lang('site.Қоғамдық қор мүшелері')</a></li>
+                        <li>
+                            <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl('/akimshilik') }}">
+                                @lang('site.Әкімшілік')
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl('/kenes') }}">
+                                @lang('site.Ардагерлер кеңесі')
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                @lang('site.Қоғамдық мүшелері')
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                @lang('site.Аналар кеңесі')
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                @lang('site.Медиатор')
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">@lang('site.Қоғамдық қор мүшелері')
+                            </a>
+                        </li>
                     </ul>
                 </div>
-                <a class="link-item" href="{{ LaravelLocalization::localizeUrl('/zhanalyq') }}">@lang('site.Жаңалықтар')</a>
+                <a class="link-item" href="{{ LaravelLocalization::localizeUrl('/zhanalyqtar') }}">@lang('site.Жаңалықтар')</a>
                 <a class="link-item" href="#">@lang('site.Кітапхана')</a>
                 <a class="link-item" href="{{ LaravelLocalization::localizeUrl('/videos') }}">@lang('site.Бейнероликтер')</a>
                 <a class="link-item" href="{{ LaravelLocalization::localizeUrl('/forum') }}">@lang('site.Форум')</a>

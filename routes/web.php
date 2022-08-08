@@ -28,9 +28,13 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
     Route::get('/auyl', function () {
         return view('pages.auyl');
     });
+    Route::get('/zhanalyqtar', function () {
+        return view('pages.zhanalyqtar');
+    });
     Route::get('/zhanalyq', function () {
         return view('pages.zhanalyq');
     });
+
     Route::get('/akimshilik', function () {
         return view('pages.akimshilik');
     });
