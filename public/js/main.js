@@ -17,9 +17,6 @@ $('.phone_musk').mask("+7(799) 999 99-99");
 $('.phone_musk').on('focus', () => {
     if ($('.phone_musk').val() === '') $('.phone_musk').val('+7(7');
 });
-$('.phone_musk').on('focusout', () => {
-    if ($('.phone_musk').val() === '+7(7') $('.phone_musk').val('');
-});
 $('.loginer .head .login').on('click', () => {
     $('.loginer .head .login').addClass('active');
     $('.loginer .head .register').removeClass('active');
