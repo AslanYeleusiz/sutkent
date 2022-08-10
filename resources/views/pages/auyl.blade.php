@@ -3,7 +3,7 @@
 <div class="container">
     <section class="auyl">
         <div class="hleb">
-            Басты бет / Ауыл жайлы
+            <a href="{{ LaravelLocalization::localizeUrl('/') }}">Басты бет</a> / Ауыл жайлы
         </div>
         <div class="h">Ауыл жайлы</div>
         <div class="about">

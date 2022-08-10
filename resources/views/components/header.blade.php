@@ -5,11 +5,11 @@
                 @lang('site.Сүткент ауылының ресми сайтына қош келдіңіз!')
             </div>
             <div class="info a-c">
-                <div>Сейсенбі, 26 Шілде</div>
+                <div>@lang("site.".date('l')), {{date('d')}} @lang('site.'.date('F'))</div>
                 <div class="seti">
-                    <img src="{{asset('images/social/facebook.svg')}}" alt="">
-                    <img src="{{asset('images/social/instagram.svg')}}" alt="">
-                    <img src="{{asset('images/social/telegram.svg')}}" alt="">
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100025379105480"><img src="{{asset('images/social/facebook.svg')}}" alt=""></a>
+                    <a target="_blank" href="https://instagram.com/sutkent.kz"><img src="{{asset('images/social/instagram.svg')}}" alt=""></a>
+                    <a target="_blank" href="#"><img src="{{asset('images/social/telegram.svg')}}" alt=""></a>
                 </div>
             </div>
         </div>
@@ -33,27 +33,27 @@
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl('/kenes') }}">
+                            <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl('/ardagerler-kenesi') }}">
                                 @lang('site.Ардагерлер кеңесі')
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl('/qoghamdyq-musheler') }}">
                                 @lang('site.Қоғамдық мүшелері')
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl('/analar-kenesi') }}">
                                 @lang('site.Аналар кеңесі')
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl('/mediator') }}">
                                 @lang('site.Медиатор')
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">@lang('site.Қоғамдық қор мүшелері')
+                            <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl('/qoghamdyq-khor-musheler') }}">@lang('site.Қоғамдық қор мүшелері')
                             </a>
                         </li>
                     </ul>
@@ -70,10 +70,20 @@
                 @else
                 <a href="{{ LaravelLocalization::getLocalizedURL('kk') }}"><button class="btn link-item"><span class="disabled">Қаз /</span>Рус</button></a>
                 @endif
+                @guest
                 <button class="btn link-item loginBtn">
                     <img src="{{asset('images/kiru.svg')}}" alt="">
                     @lang('site.Кіру')
                 </button>
+                @else
+                <form method="post" action="{{LaravelLocalization::localizeUrl('/auth/logout')}}">
+                   @csrf
+                    <button class="btn link-item logoutBtn">
+                        <img src="{{asset('images/kiru.svg')}}" alt="">
+                        @lang('site.Шығу')
+                    </button>
+                </form>
+                @endguest
                 <div class="mob_menu a-c">
                     <a class="mob_item" href="#">
                         <img src="{{asset('images/social/facebook.svg')}}" alt="">

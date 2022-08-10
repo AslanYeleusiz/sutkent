@@ -13,6 +13,13 @@ return [
     |
     */
 
+    'kk_title' => 'Қазақша тақырыбы',
+    'ru_title' => 'Орысша тақырыбы',
+    'kk_description' => 'Қазақша сипаттама',
+    'ru_description' => 'Орысша сипаттама',
+    'kk_short_description' => 'Қазақша қысқа сипаттама',
+    'ru_short_description' => 'Орысша қысқа сипаттама',
+    'image' => 'Материал',
     'accepted' => 'The :attribute must be accepted.',
     'accepted_if' => 'The :attribute must be accepted when :other is :value.',
     'active_url' => 'The :attribute is not a valid URL.',
@@ -62,7 +69,6 @@ return [
         'numeric' => 'The :attribute must be greater than or equal to :value.',
         'string' => 'The :attribute must be greater than or equal to :value characters.',
     ],
-    'image' => 'The :attribute must be an image.',
     'in' => 'The selected :attribute is invalid.',
     'in_array' => 'The :attribute field does not exist in :other.',
     'integer' => 'The :attribute must be an integer.',

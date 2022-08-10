@@ -16,54 +16,19 @@
         </div>
         <div class="ab">@lang('site.Әкімшілік қызметкерлері')</div>
         <div class="admins">
+        @foreach($users as $user)
             <div class="block">
-                <img src="{{asset('images/admins/1.png')}}" alt="">
+                <div style="background-image: url({{asset('/images/kenes/avatar/'.$user->img)}})" class="img"></div>
                 <div class="body">
-                    <div class="head"><b>Кенбай Қайрат Рахымжанұлы</b><br>
-                        @lang('site.Сүткент ауылдық округінің әкімі')</div>
+                    <div class="head"><b>{{$user->name}}</b><br>
+                        {{$user->rank}}</div>
                     <div class="mid">
-                        Тел.: +7 707 558 51 84 <br>E-mail: 77kayrat77@mail.ru
+                        Тел.: {{$user->phone}} <br>E-mail: {{$user->email}}
                     </div>
                     <a href="#"><button class="btn glassBtn">@lang('site.Жекеге жазу')</button></a>
                 </div>
             </div>
-            <div class="block">
-                <img src="{{asset('images/admins/2.png')}}" alt="">
-                <div class="body">
-                    <div class="head"><b>Кенбай Қайрат Рахымжанұлы</b><br>
-                        Сүткент ауылдық округінің әкімі</div>
-                    <div class="mid">
-                        Тел.: +7 707 558 51 84 <br>E-mail: 77kayrat77@mail.ru
-                    </div>
-                    <a href="#"><button class="btn glassBtn">Жекеге жазу</button></a>
-                </div>
-            </div>
-               <div class="block">
-                <img src="{{asset('images/admins/2.png')}}" alt="">
-                <div class="body">
-                    <div class="head"><b>Кенбай Қайрат Рахымжанұлы</b><br>
-                        Сүткент ауылдық округінің әкімі</div>
-                    <div class="mid">
-                        Тел.: +7 707 558 51 84 <br>E-mail: 77kayrat77@mail.ru
-                    </div>
-                    <a href="#"><button class="btn glassBtn">Жекеге жазу</button></a>
-                </div>
-            </div>
-            <div class="block">
-                <img src="{{asset('images/admins/1.png')}}" alt="">
-                <div class="body">
-                    <div class="head"><b>Кенбай Қайрат Рахымжанұлы</b><br>
-                        Сүткент ауылдық округінің әкімі</div>
-                    <div class="mid">
-                        Тел.: +7 707 558 51 84 <br>E-mail: 77kayrat77@mail.ru
-                    </div>
-                    <a href="#"><button class="btn glassBtn">Жекеге жазу</button></a>
-                </div>
-            </div>
-
-
-
-
+        @endforeach
         </div>
     </div>
 </section>

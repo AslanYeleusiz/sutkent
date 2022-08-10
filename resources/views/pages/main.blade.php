@@ -4,29 +4,19 @@
 <section class="main">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            @foreach($sliders as $slider)
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$loop->index}}" @if($loop->index == 0)  class="active" aria-current="true" @endif aria-label="Slide {{$loop->index+1}}"></button>
+            @endforeach
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
+           @foreach($sliders as $slider)
+            <div class="carousel-item {{!$loop->index ? 'active' : ''}}">
                 <div class="carousel-title">
-                    Сыры терең,<br>бірлігі ерен Сүткент
+                    <?php echo $slider['title'] ?>
                 </div>
-                <img src="{{asset('images/slide/1.jpg')}}" class="d-block w-100" alt="...">
+                <img src="{{asset('images/slide/'.$slider->image)}}" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item">
-               <div class="carousel-title">
-                    Сүткент, сүт мекенiм –<br>қалашығым
-                </div>
-                <img src="{{asset('images/slide/2.jpg')}}" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-               <div class="carousel-title">
-                    Бабалар өткен кешегi,<br>Құт қонған мекен деседi
-                </div>
-                <img src="{{asset('images/slide/3.jpg')}}" class="d-block w-100" alt="...">
-            </div>
+            @endforeach
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -54,51 +44,24 @@
         <div class="news">
             <div class="h">@lang('site.Жаңалықтар')</div>
             <div class="wrap">
+               @foreach($news as $new)
                 <div class="news_block">
-                    <a href="#">
-                        <div class="image" style="background-image: url('/images/news/1.jpg')">
+                    <a href="{{'/zhanalyq/'.$new->lat_title.'-'.$new->id.'.html'}}">
+                        <div class="image" style="background-image: url('{{asset('images/news/'.$new->image)}}')">
                         </div>
                     </a>
                     <div class="body">
                         <div class="title">
-                            Шаруагерлер бағаны тұрақтандыруға атсалысуы керек
+                            {{$new->title}}
                         </div>
                         <div class="description">
-                            "ЕСЕН" ШҚ Әліби Кісенбай ата кәсіпті қолға алған шаруаның бірі. Қазіргі кезде жалпы саны 800-ге жуық төрт түлікті өсіріп отыр. Үстіміздегі жылы 4 гектар жерге қауын-қарбыз... <a href="#">Толық оқу</a>
+                            {{$new->short_description}}
                         </div>
-                        <div class="time">23 Шілде 2022, 12:10</div>
+                        <a href="#">@lang('site.Толық оқу')</a>
+                        <div class="time">{{$new->date}}</div>
                     </div>
                 </div>
-                <div class="news_block">
-                    <a href="#">
-                        <div class="image" style="background-image: url('/images/news/2.jpg')">
-                        </div>
-                    </a>
-                    <div class="body">
-                        <div class="title">
-                            «Сыбаға» мемлекеттік бағдарламасы
-                        </div>
-                        <div class="description">
-                            Ауылда мал шаруашылығы тұрақты дамып, 2022 жылы «Сыбаға» мемлекеттік бағдарламасы 147%, «Алтын асық» - 159, «Құлан» - 127% орындалды. Осының барлығы мал басының орта есеппен 3,5%-ға өсуіне мүмкіндік беріп... <a href="#">Толық оқу</a>
-                        </div>
-                        <div class="time">23 Шілде 2022, 12:10</div>
-                    </div>
-                </div>
-                <div class="news_block">
-                    <a href="#">
-                        <div class="image" style="background-image: url('/images/news/3.jpg')"></div>
-                    </a>
-                    <div class="body">
-                        <div class="title">
-                            Тарихи мұралар – өркениеттің өлшемі
-                        </div>
-                        <div class="description">
-                            Ескі ескерткіштер, киелі кесенелер, қасиетті қоныстар – өркениеттің өлшемі һәм куәсі. Сыр өңірінде есепке алынған 286 ескірткіш, яғни 30 республикалық, 256 жергілікті маңызы бар ескерткіштер мемлекет... <a href="#">Толық оқу</a>
-                        </div>
-                        <div class="time">23 Шілде 2022, 12:10</div>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
             <a href="{{ LaravelLocalization::localizeUrl('/zhanalyqtar') }}" class="next">
                 <button class="btn glassBtn">
@@ -130,30 +93,16 @@
         <div class="container">
             <div class="h">@lang('site.Бейнероликтер')</div>
             <div class="wrap">
-                <a href="#">
-                    <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/about/2.jpg);" class="video_block aj-c">
+               @foreach($videos as $video)
+                <a href="{{'/video/'.$video->lat_title.'-'.$video->id.'.html'}}">
+                    <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url({{'//img.youtube.com/vi/'.$video->link.'/mqdefault.jpg'}}) no-repeat 50% 50%/auto 100%;" class="video_block aj-c">
                         <div class="title">
-                            Ауыл тойы айырықша өтті
+                            {{$video->title}}
                         </div>
                         <img src="{{asset('images/youtube.svg')}}" alt="">
                     </div>
                 </a>
-                <a href="#">
-                    <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/about/2.jpg);" class="video_block aj-c">
-                        <div class="title">
-                            Ауыл тойы айырықша өтті
-                        </div>
-                        <img src="{{asset('images/youtube.svg')}}" alt="">
-                    </div>
-                </a>
-                <a href="#">
-                    <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/about/2.jpg);" class="video_block aj-c">
-                        <div class="title">
-                            Ауыл тойы айырықша өтті
-                        </div>
-                        <img src="{{asset('images/youtube.svg')}}" alt="">
-                    </div>
-                </a>
+                @endforeach
             </div>
             <div class="next">
                 <a href="{{LaravelLocalization::localizeUrl('/videos')}}">

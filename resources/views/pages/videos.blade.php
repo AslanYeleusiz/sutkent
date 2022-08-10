@@ -8,49 +8,22 @@
         </div>
         <div class="h">@lang('site.Бейнероликтер')</div>
         <div class="wrap">
-            <a href="{{ LaravelLocalization::localizeUrl('/video') }}">
-                <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/about/2.jpg);" class="video_block aj-c">
+            @foreach($videos as $video)
+            <a href="{{'/video/'.$video->lat_title.'-'.$video->id.'.html'}}">
+                <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url({{'//img.youtube.com/vi/'.$video->link.'/mqdefault.jpg'}}) no-repeat 50% 50%/auto 100%;" class="video_block aj-c">
                     <div class="title">
-                        Ауыл тойы айырықша өтті
+                        {{$video->title}}
                     </div>
                     <img src="{{asset('images/youtube.svg')}}" alt="">
                 </div>
             </a>
-            <a href="#">
-                <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/about/2.jpg);" class="video_block aj-c">
-                    <div class="title">
-                        Ауыл тойы айырықша өтті
-                    </div>
-                    <img src="{{asset('images/youtube.svg')}}" alt="">
-                </div>
-            </a>
-            <a href="#">
-                <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/about/2.jpg);" class="video_block aj-c">
-                    <div class="title">
-                        Ауыл тойы айырықша өтті
-                    </div>
-                    <img src="{{asset('images/youtube.svg')}}" alt="">
-                </div>
-            </a>
-            <a href="#">
-                <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/about/2.jpg);" class="video_block aj-c">
-                    <div class="title">
-                        Ауыл тойы айырықша өтті
-                    </div>
-                    <img src="{{asset('images/youtube.svg')}}" alt="">
-                </div>
-            </a>
-            <a href="#">
-                <div style="background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/about/2.jpg);" class="video_block aj-c">
-                    <div class="title">
-                        Ауыл тойы айырықша өтті
-                    </div>
-                    <img src="{{asset('images/youtube.svg')}}" alt="">
-                </div>
-            </a>
+            @endforeach
+
+
         </div>
-        <div class="pagination">
-<!--Пагинацию надо сделать сюда-->
+        <div class="paginator">
+           {{$videos->links('components.paginate')}}
+            <!--Пагинацию надо сделать сюда-->
         </div>
     </div>
 </section>

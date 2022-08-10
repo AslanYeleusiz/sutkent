@@ -66,7 +66,22 @@
     .video .sam_video .iframe {
         height: 723px;
     }
-
+    .carousel-title{
+        font-size: 41px;
+        line-height: 45px;
+    }
+    .bailanys .wrap {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 30px;
+}
+    .bailanys .info {
+    padding-right: 100px;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 35px;
+}
 }
 
 @media all and (max-width: 1199px) {
@@ -207,6 +222,18 @@
         font-size: 18px;
         line-height: 24px;
     }
+
+    .carousel-title {
+    font-size: 33px;
+    line-height: 41px;
+}
+    .bailanys .info {
+    padding-right: 100px;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 31px;
+}
+
 }
 
 @media all and (max-width: 991px) {
@@ -351,6 +378,18 @@
         font-size: 16px;
         line-height: 22px;
     }
+
+    .carousel-title {
+    font-size: 30px;
+    line-height: 38px;
+}
+
+    .bailanys .info {
+    padding-right: 61px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+}
 }
 
 @media all and (max-width: 767px) {
@@ -558,8 +597,24 @@
         margin-top: 30px;
     }
 
+    .carousel-title {
+    font-size: 27px;
+    line-height: 32px;
+}
 
-
+    .bailanys .info {
+     padding-right: 154px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 23px;
+}
+.bailanys .wrap {
+    margin-top: 42px;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 30px;
+    grid-gap: 30px;
+}
 }
 
 @media all and (max-width: 575px) {
@@ -630,6 +685,20 @@
 }.video .sam_video {
     margin-top: 15px;
 }
+    .carousel-title {
+    font-size: 20px;
+    line-height: 26px;
+}
+    .bailanys .info {
+    padding-right: 154px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
+    .bailanys .wrap {
+    margin-top: 30px;
+    padding: 0;
+}
 }
 
 @media all and (max-width: 452px) {
@@ -655,6 +724,16 @@
         margin-top: 20px;
     }
 
+    .carousel-title {
+    font-size: 17px;
+    line-height: 20px;
+}
+    .bailanys .info {
+    padding-right: 99px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+}
 }
 
 @media all and (max-width: 380px) {
@@ -675,4 +754,9 @@
     .main .news .image {
         height: 294px;
     }
+
+    .carousel-title {
+    font-size: 15px;
+    line-height: 17px;
+}
 }

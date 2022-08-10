@@ -8,52 +8,28 @@
         </div>
         <div class="h">@lang('site.Жаңалықтар')</div>
         <div class="wrap">
+           @foreach($news as $new)
             <div class="news_block">
-                <a href="#">
-                    <div class="image" style="background-image: url('/images/news/1.jpg')">
+                <a href="{{'/zhanalyq/'.$new->lat_title.'-'.$new->id.'.html'}}">
+                    <div class="image" style="background-image: url({{'/images/news/'.$new->image}})">
                     </div>
                 </a>
                 <div class="body">
                     <div class="title">
-                        Шаруагерлер бағаны тұрақтандыруға атсалысуы керек
+                        {{$new->title}}
                     </div>
                     <div class="description">
-                        "ЕСЕН" ШҚ Әліби Кісенбай ата кәсіпті қолға алған шаруаның бірі. Қазіргі кезде жалпы саны 800-ге жуық төрт түлікті өсіріп отыр. Үстіміздегі жылы 4 гектар жерге қауын-қарбыз... <a href="#">Толық оқу</a>
+                        {{$new->short_description}}
                     </div>
-                    <div class="time">23 Шілде 2022, 12:10</div>
+                    <a href="{{'/zhanalyq/'.$new->lat_title.'-'.$new->id.'.html'}}">@lang('site.Толық оқу')</a>
+                    <div class="time">{{$new->date}}</div>
                 </div>
             </div>
-            <div class="news_block">
-                <a href="#">
-                    <div class="image" style="background-image: url('/images/news/2.jpg')">
-                    </div>
-                </a>
-                <div class="body">
-                    <div class="title">
-                        «Сыбаға» мемлекеттік бағдарламасы
-                    </div>
-                    <div class="description">
-                        Ауылда мал шаруашылығы тұрақты дамып, 2022 жылы «Сыбаға» мемлекеттік бағдарламасы 147%, «Алтын асық» - 159, «Құлан» - 127% орындалды. Осының барлығы мал басының орта есеппен 3,5%-ға өсуіне мүмкіндік беріп... <a href="#">Толық оқу</a>
-                    </div>
-                    <div class="time">23 Шілде 2022, 12:10</div>
-                </div>
-            </div>
-            <div class="news_block">
-                <a href="#">
-                    <div class="image" style="background-image: url('/images/news/3.jpg')"></div>
-                </a>
-                <div class="body">
-                    <div class="title">
-                        Тарихи мұралар – өркениеттің өлшемі
-                    </div>
-                    <div class="description">
-                        Ескі ескерткіштер, киелі кесенелер, қасиетті қоныстар – өркениеттің өлшемі һәм куәсі. Сыр өңірінде есепке алынған 286 ескірткіш, яғни 30 республикалық, 256 жергілікті маңызы бар ескерткіштер мемлекет... <a href="#">Толық оқу</a>
-                    </div>
-                    <div class="time">23 Шілде 2022, 12:10</div>
-                </div>
-            </div>
+            @endforeach
         </div>
-        <div class="pagination"></div>
+        <div class="paginator">
+            {{$news->links('components.paginate')}}
+        </div>
     </div>
     </div>
 </div>

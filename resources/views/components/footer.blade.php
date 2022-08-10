@@ -3,7 +3,7 @@
         <div class="wrap">
             <div class="f1">
                 <img src="{{asset('images/logoFooter.svg')}}" alt="">
-                <div class="span">Сүткент ауылының <br>ресми сайты</div>
+                <div class="span">@lang('site.Сүткент ауылының') <br>@lang('site.ресми сайты')</div>
                 <div class="seti a-c">
                     <a href="#"><img src="{{asset('images/social/w_facebook.svg')}}" alt=""></a>
                     <a href="#"><img src="{{asset('images/social/w_instagram.svg')}}" alt=""></a>
@@ -11,27 +11,26 @@
                 </div>
             </div>
             <div class="f2">
-                <div class="head">Сайт картасы</div>
+                <div class="head">@lang('site.Сайт картасы')</div>
                 <br>
-                <a href="#">Қор жайлы</a>
-                <a href="#">Бағдарламалар</a>
-                <a href="#">Бейнероликтер</a>
-                <a href="#">Байланыс</a>
+                <a href="{{LaravelLocalization::localizeUrl('/quyl')}}">@lang('site.Қор жайлы')</a>
+                <a href="#">@lang('site.Бағдарламалар')</a>
+                <a href="{{LaravelLocalization::localizeUrl('/videos')}}">@lang('site.Бейнероликтер')</a>
+                <a href="{{LaravelLocalization::localizeUrl('/bailanys')}}">@lang('site.Байланыс')</a>
             </div>
             <div class="f3">
-                <div class="head">Мекен-жайы:</div>
+                <div class="head">@lang('site.Мекен-жайы'):</div>
                 <br>
-                <span>Түркістан облысы,
-                    Шардара ауданы, Сүткент ауылы</span>
+                <span>@lang('site.Түркістан облысы, Шардара ауданы, Сүткент ауылы')</span>
                 <br>
                 <span>Эл. почта: newsutkent@gmail.com</span><span>Тел.: +7 707 055-99-22</span>
             </div>
             <div class="f4"></div>
             <div class="f5">
-                <div class="head">Біз әлеуметтік желіде:</div>
+                <div class="head">@lang('site.Біз әлеуметтік желіде'):</div>
                 <div class="a-c">
-                    <a href="#"><img src="{{asset('images/social/w_facebook.svg')}}" alt=""></a>
-                    <a href="#"><img src="{{asset('images/social/w_instagram.svg')}}" alt=""></a>
+                    <a href="https://www.facebook.com/profile.php?id=100025379105480"><img src="{{asset('images/social/w_facebook.svg')}}" alt=""></a>
+                    <a href="https://instagram.com/sutkent.kz"><img src="{{asset('images/social/w_instagram.svg')}}" alt=""></a>
                     <a href="#"><img src="{{asset('images/social/w_telegram.svg')}}" alt=""></a>
                 </div>
             </div>
