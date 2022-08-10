@@ -1,4 +1,6 @@
 @extends('layouts.default')
+@section('title', 'Форум')
+
 @section('content')
 
 <section class="forum">

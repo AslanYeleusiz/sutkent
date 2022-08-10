@@ -1,4 +1,6 @@
 @extends('layouts.default')
+@section('title', 'Әкімшілік')
+
 @section('content')
 
 <section class="akim">

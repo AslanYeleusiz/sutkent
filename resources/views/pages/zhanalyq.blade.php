@@ -1,4 +1,6 @@
 @extends('layouts.default')
+@section('title', $new->title.' | Жаңалықтар')
+
 @section('content')
 <section class="zhanalyq">
     <div class="container">

@@ -1,4 +1,6 @@
 @extends('layouts.default')
+@section('title', 'Бейнероликтер')
+
 @section('content')
 
 <section class="video">

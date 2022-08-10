@@ -1,4 +1,6 @@
 @extends('layouts.default')
+@section('title', 'Жаңалықтар')
+
 @section('content')
 <div class="main">
     <div class="container">

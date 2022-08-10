@@ -5,15 +5,15 @@
                 <img src="{{asset('images/logoFooter.svg')}}" alt="">
                 <div class="span">@lang('site.Сүткент ауылының') <br>@lang('site.ресми сайты')</div>
                 <div class="seti a-c">
-                    <a href="#"><img src="{{asset('images/social/w_facebook.svg')}}" alt=""></a>
-                    <a href="#"><img src="{{asset('images/social/w_instagram.svg')}}" alt=""></a>
+                    <a href="https://www.facebook.com/profile.php?id=100025379105480"><img src="{{asset('images/social/w_facebook.svg')}}" alt=""></a>
+                    <a href="https://instagram.com/sutkent.kz"><img src="{{asset('images/social/w_instagram.svg')}}" alt=""></a>
                     <a href="#"><img src="{{asset('images/social/w_telegram.svg')}}" alt=""></a>
                 </div>
             </div>
             <div class="f2">
                 <div class="head">@lang('site.Сайт картасы')</div>
                 <br>
-                <a href="{{LaravelLocalization::localizeUrl('/quyl')}}">@lang('site.Қор жайлы')</a>
+                <a href="{{LaravelLocalization::localizeUrl('/auyl')}}">@lang('site.Қор жайлы')</a>
                 <a href="#">@lang('site.Бағдарламалар')</a>
                 <a href="{{LaravelLocalization::localizeUrl('/videos')}}">@lang('site.Бейнероликтер')</a>
                 <a href="{{LaravelLocalization::localizeUrl('/bailanys')}}">@lang('site.Байланыс')</a>

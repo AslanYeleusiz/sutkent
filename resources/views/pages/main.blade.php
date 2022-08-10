@@ -1,4 +1,6 @@
 @extends('layouts.default')
+@section('title', 'Басты бет')
+
 @section('content')
 
 <section class="main">

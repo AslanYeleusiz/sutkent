@@ -1,4 +1,6 @@
 @extends('layouts.default')
+@section('title', 'Галерея')
+
 @section('content')
 <section class="gallery video">
     <div class="popup aj-c" style="display: none">

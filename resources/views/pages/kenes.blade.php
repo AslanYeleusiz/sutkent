@@ -1,4 +1,6 @@
 @extends('layouts.default')
+@section('title', $kenes)
+
 @section('content')
 
 <section class="akim">
