@@ -116,6 +116,9 @@ class GalleryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $gallery = gallery::findOrFail($id);
+        Storage::disk('images')->delete('gallery/'.$gallery->img);
+        $gallery->delete();
+        return redirect()->route('gallery.index')->with('message','Галлереядан мәлімет сәтті жойылды.');
     }
 }

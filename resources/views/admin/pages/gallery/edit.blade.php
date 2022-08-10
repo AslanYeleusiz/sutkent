@@ -35,7 +35,7 @@
     </div>
     @endif
     <form method="post" action="{{route('gallery.update', $material->id)}}" enctype="multipart/form-data">
-       @method('PUT')
+        @method('PUT')
         @csrf
         <div class="card-body">
             <div class="form-group">
@@ -58,7 +58,18 @@
             <button type="submit" class="btn btn-primary px-5">Сақтау</button>
         </div>
     </form>
-    <div class="p-2 w-50"><img src="{{asset('images/gallery/'.$material->img)}}" alt=""></div>
+    <div class="p-2 w-50">
+        <img src="{{asset('images/gallery/'.$material->img)}}" alt="">
+        <form action="{{route('gallery.destroy',$material->id)}}" method="post" onSubmit="return window.confirm('Бұл материалды өшіруді растайсыз ба?');" style="display: inline">
+           @method('DELETE')
+            @csrf
+            <button type="submit" class="btn btn-danger mt-2 ml-2 px-5">
+                <i class="fas fa-trash">
+                </i>
+                Өшіру
+            </button>
+        </form>
+    </div>
 </div>
 
 
