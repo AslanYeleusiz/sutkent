@@ -42,8 +42,8 @@
                 <input type="text" name="name" class="form-control" id="name" placeholder="Аты-жөніңіз..." required>
             </div>
             <div class="form-group">
-                <label for="email">email *</label>
-                <input type="text" name="email" class="form-control" id="email" placeholder="Электронды почта..." required>
+                <label for="email">email</label>
+                <input type="text" name="email" class="form-control" id="email" placeholder="Электронды почта...">
             </div>
             <div class="form-group">
                 <label for="password">Пароль *</label>

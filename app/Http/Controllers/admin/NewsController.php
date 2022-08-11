@@ -33,7 +33,7 @@ class NewsController extends Controller
             'ru_description' => 'required',
             'kk_short_description' => 'required',
             'ru_short_description' => 'required',
-            'image' => 'required|mimes: jpg,jpeg,jfif,png'
+            'image' => 'mimes: jpg,jpeg,jfif,png'
         ], $messages);
         $filename = $request->last_image;
         if($request->file('image')){

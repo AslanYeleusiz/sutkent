@@ -37,9 +37,14 @@
         @csrf
         <div class="card-body">
             <div class="form-group">
-                <label for="title">Титулка</label>
-                <input type="text" name="title" class="form-control" id="title" placeholder="Тақырыпты енгізіңіз..." value="{{$material->title}}">
+                <label for="kk_title">Титулка (қазақша)</label>
+                <textarea type="text" name="kk_title" class="ckeditor" id="kk_title" placeholder="Тақырыпты енгізіңіз...">{{$material->kk_title}}</textarea>
             </div>
+            <div class="form-group">
+                <label for="ru_title">Титулка (орысша)</label>
+                <textarea type="text" name="ru_title" class="ckeditor" id="ru_title" placeholder="Тақырыпты енгізіңіз...">{{$material->ru_title}}</textarea>
+            </div>
+
             <div class="form-group">
                 <label for="image">Файл жүктеу</label>
                 <div class="input-group">

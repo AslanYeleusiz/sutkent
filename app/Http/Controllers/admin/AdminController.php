@@ -42,7 +42,8 @@ class AdminController extends Controller
                 $filename
             );
         slider::create([
-            'title' => $request->title,
+            'kk_title' => $request->kk_title,
+            'ru_title' => $request->ru_title,
             'image' => $filename,
         ]);
         return redirect()->route('admin.index')->with('message','Слайдерге мәлімет сәтті жүктелді.');
@@ -70,7 +71,8 @@ class AdminController extends Controller
             );
         };
         slider::findOrFail($id)->update([
-            'title' => $request->title,
+            'kk_title' => $request->kk_title,
+            'ru_title' => $request->ru_title,
             'image' => $filename,
         ]);
         return redirect()->route('admin.index')->with('message','Галлереяға мәлімет сәтті өзгертілді.');

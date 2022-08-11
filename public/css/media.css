@@ -5,11 +5,11 @@
     }
 
     .header .wrap .links {
-        grid-gap: 37px;
+        grid-gap: 34px;
     }
 
     .header .wrap .right {
-        grid-gap: 40px;
+        grid-gap: 33px;
     }
 
     .main .h {
@@ -86,11 +86,11 @@
 
 @media all and (max-width: 1199px) {
     .header .wrap .links {
-        grid-gap: 14px;
+        grid-gap: 15px;
     }
 
     .header .wrap .right {
-        grid-gap: 16px;
+        grid-gap: 15px;
     }
 
     .h {
@@ -233,14 +233,20 @@
     font-weight: 400;
     line-height: 31px;
 }
+    .forum .block {
+    padding: 75px 0 103px;
+}
 
 }
 
 @media all and (max-width: 991px) {
+    .header .wrap{
+        grid-gap: 10px;
+    }
     .header .wrap .links {
         display: flex;
         flex-wrap: wrap;
-        grid-gap: 5px 18px;
+        grid-gap: 5px 34px;
     }
 
     .subHeader .wrap {
@@ -389,6 +395,9 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
+}
+    .forum .block {
+    padding: 59px 0 79px;
 }
 }
 
@@ -615,6 +624,18 @@
     padding: 0 30px;
     grid-gap: 30px;
 }
+    .forum .block {
+    padding: 43px 0 79px;
+    margin-top: 53px;
+}
+    .forum .block .head {
+    font-size: 27px;
+    line-height: 34px;
+}.forum .block .desc {
+    font-size: 16px;
+    line-height: 19px;
+}
+
 }
 
 @media all and (max-width: 575px) {
@@ -699,6 +720,17 @@
     margin-top: 30px;
     padding: 0;
 }
+    .forum .block {
+    margin-top: 40px;
+}
+    .forum .block .head {
+    font-size: 24px;
+    line-height: 29px;
+}
+    .forum .block .desc {
+    font-size: 15px;
+    line-height: 17px;
+}
 }
 
 @media all and (max-width: 452px) {
@@ -734,6 +766,14 @@
     font-weight: 400;
     line-height: 20px;
 }
+    .forum .block .head {
+    font-size: 22px;
+    line-height: 27px;
+}.forum .block .desc {
+    font-size: 14px;
+    line-height: 16px;
+}
+
 }
 
 @media all and (max-width: 380px) {

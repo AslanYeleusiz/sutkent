@@ -13,7 +13,7 @@ use App\Helpers\Date;
 use App\Helpers\Helper;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
-
+use Mail;
 
 class MainController extends Controller
 {
@@ -34,8 +34,11 @@ class MainController extends Controller
             foreach ($videos as $material) {
                 $material->title = $material->kk_title;
                 $material->lat_title = Helper::translate($material->kk_title);
-
             }
+            foreach ($sliders as $material) {
+                $material->title = $material->kk_title;
+            }
+
         }else{
             foreach ($news as $material) {
                 $material->date = Date::dmYKZ($material->created_at);
@@ -47,6 +50,9 @@ class MainController extends Controller
             foreach ($videos as $material) {
                 $material->title = $material->ru_title;
                 $material->lat_title = Helper::translate($material->ru_title);
+            }
+            foreach ($sliders as $material) {
+                $material->title = $material->ru_title;
             }
         }
         return view('pages.main')->with([
@@ -167,7 +173,6 @@ class MainController extends Controller
             'kenes' => __('site.Қоғамдық қор мүшелері')
         ]);
     }
-
     public function forum() {
         $forums = forum::orderBy('created_at', 'desc')->paginate(10);
         foreach ($forums as $forum) {
@@ -179,20 +184,25 @@ class MainController extends Controller
     }
     public function forumSend(Request $request) {
         forum::create([
-            'user_id' => auth()->user()->id,
             'name' => $request->name,
             'text' => $request->text
         ]);
-        return redirect()->route('forum');
+        return redirect()->route('forum')->withSuccess('success');
     }
-
     public function gallery(Request $request) {
         $gallerys = gallery::orderBy('created_at','desc')->paginate(12);
         return view('pages.gallery')->with([
             'galleryes' => $gallerys
         ]);
     }
-
+    public function mailSend(Request $request) {
+        Mail::send(['text' => 'components.mail'], ['name', 'Web dev blog'], function ($message) {
+            $message->to('newsutkent@gmail.com', 'To web dev blog')
+                ->subject('test subject');
+            $message->from('newsutkent@gmail.com', 'Web dev blog');
+        });
+        return redirect()->route('home')->withSuccess('success');
+    }
 
 
 

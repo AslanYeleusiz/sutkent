@@ -67,7 +67,7 @@
                             {{$user->created_at}}
                         </td>
                         <td class="project-actions text-right">
-                            <form action="{{route('qoldanushylar.destroy',$user->id)}}" method="post" onSubmit="return window.confirm('Бұл қолданушыны өшіруді растайсыз ба?');" style="display: inline">
+                            <form action="{{route('forum.destroy',$user->id)}}" method="post" onSubmit="return window.confirm('Бұл қолданушыны өшіруді растайсыз ба?');" style="display: inline">
                               @method('DELETE')
                                @csrf
                                 <button type="submit" class="btn btn-danger btn-sm">

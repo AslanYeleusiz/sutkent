@@ -16,7 +16,10 @@
 </head>
 
 <body>
-   @include('components.loginPopup')
+    @if(session()->has('success'))
+        @include('components.successPopup')
+    @endif
+    @include('components.loginPopup')
     <header>
         @include('components.mobileMenuBar')
         @include('components.header')

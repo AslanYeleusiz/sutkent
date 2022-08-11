@@ -53,13 +53,13 @@
                         </div>
                     </a>
                     <div class="body">
-                        <div class="title">
+                        <a href="{{'/zhanalyq/'.$new->lat_title.'-'.$new->id.'.html'}}" class="title">
                             {{$new->title}}
-                        </div>
+                        </a>
                         <div class="description">
                             {{$new->short_description}}
                         </div>
-                        <a href="#">@lang('site.Толық оқу')</a>
+                        <a href="{{'/zhanalyq/'.$new->lat_title.'-'.$new->id.'.html'}}">@lang('site.Толық оқу')</a>
                         <div class="time">{{$new->date}}</div>
                     </div>
                 </div>
@@ -78,7 +78,8 @@
             <div class="desc">
                 @lang('site.Егер ауылымыздың дамуына үлес қосқыңыз келсе, өтініш қалдырыңыз, біздің қызметкерлер сізге жақын арада хабарласады')
             </div>
-            <form action="" class="form">
+            <form method="post" action="{{route('mail.send')}}" class="form">
+               @csrf
                 <input type="text" name="name" id="name" class="form-control" placeholder="@lang('site.Аты-жөніңіз')">
                 <input type="text" name="phone" id="phone" class="form-control phone_musk" placeholder="@lang('site.Телефон нөміріңіз')">
                 <select name="investor" id="investor" class="form-control">
@@ -87,7 +88,7 @@
                     <option value="2">@lang('site.Кәсіпкер')</option>
                     <option value="3">@lang('site.Ерікті')</option>
                 </select>
-                <button class="btn btn-primary">@lang('site.Өтініш жіберу')</button>
+                <button type="submit" class="btn btn-primary">@lang('site.Өтініш жіберу')</button>
             </form>
         </div>
     </div>

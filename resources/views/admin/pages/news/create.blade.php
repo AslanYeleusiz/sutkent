@@ -57,11 +57,11 @@
 
             <div class="form-group">
                 <label for="kk_description">Сипаттамасын енгізіңіз (қазақша)</label>
-                <textarea type="text" name="kk_description" class="form-control" id="kk_description" placeholder="Қысқаша сипаттамасын енгізіңіз..." rows="9" required></textarea>
+                <textarea type="text" name="kk_description" class="ckeditor" id="kk_description" placeholder="Қысқаша сипаттамасын енгізіңіз..." rows="9" required></textarea>
             </div>
             <div class="form-group">
                 <label for="ru_description">Сипаттамасын енгізіңіз (орысша)</label>
-                <textarea type="text" name="ru_description" class="form-control" id="ru_description" placeholder="Қысқаша сипаттамасын енгізіңіз..." rows="9" required></textarea>
+                <textarea type="text" name="ru_description" class="ckeditor" id="ru_description" placeholder="Қысқаша сипаттамасын енгізіңіз..." rows="9" required></textarea>
             </div>
 
             <div class="form-group">

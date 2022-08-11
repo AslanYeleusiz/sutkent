@@ -37,9 +37,14 @@
         @csrf
         <div class="card-body">
             <div class="form-group">
-                <label for="title">Титулка</label>
-                <input type="text" name="title" class="form-control" id="title" placeholder="Тақырыпты енгізіңіз..." required>
+                <label for="kk_title">Титулка (қазақша)</label>
+                <textarea type="text" name="kk_title" class="ckeditor" id="kk_title" placeholder="Тақырыпты енгізіңіз..." required></textarea>
             </div>
+            <div class="form-group">
+                <label for="ru_title">Титулка (орысша)</label>
+                <textarea type="text" name="ru_title" class="ckeditor" id="ru_title" placeholder="Тақырыпты енгізіңіз..." required></textarea>
+            </div>
+
             <div class="form-group">
                 <label for="image">Файлды жүктеу</label>
                 <div class="input-group">
@@ -66,8 +71,6 @@
         <div class="collapse" id="collapseExample">
             <div class="card card-body w-50">
                 <b>Маңызды:</b> Енгізген суреттер бір форматта болуы тиіс. Яғни 1920х720 немесе 3/8 (3-биіктігі, 8-ұзындығы).<br>Кез келген суреті форматтау үшін онлайн сервистерді қолдансаңыз болады. <br>Мысалы: <a target="_blank" href="https://www.img2go.com/ru/crop-image">https://www.img2go.com/ru/crop-image</a>
-                <br>Егер cөйлем арасын 2-жолға бөлгіңіз келсе &lt;br&gt; символын қолданасыз.Бұл символды екінші жолға түсетін сөздің алдына қоясыз.
-                <br>Мысалы: Сүткент, сүт мекенiм – &lt;br&gt;қалашығым!
             </div>
         </div>
     </div><!-- /.container-fluid -->

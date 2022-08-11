@@ -40,6 +40,12 @@ class GalleryController extends Controller
      */
     public function store(Request $request)
     {
+        $messages = array(
+            'required' => ':attribute жолы толтырылуы керек.',
+        );
+        $validated = $request->validate([
+            'image' => 'required|mimes: jpg,jpeg,jfif,png'
+        ], $messages);
         $uploadedFile = $request->file('image');
             $ext = $uploadedFile->getClientOriginalExtension();
             $filename = time().'.'.$ext;
@@ -49,7 +55,6 @@ class GalleryController extends Controller
                 $filename
             );
         gallery::create([
-            'title' => $request->title,
             'img' => $filename,
         ]);
         return redirect()->route('gallery.index')->with('message','Галлереяға мәлімет сәтті жүктелді.');

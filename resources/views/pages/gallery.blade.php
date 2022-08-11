@@ -3,7 +3,7 @@
 
 @section('content')
 <section class="gallery video">
-    <div class="popup aj-c" style="display: none">
+    <div class="galleryPopup popup aj-c" style="display: none">
         <div class="container" id="popup">
            <button class="btn exitBtn">
                <img src="{{asset('images/exitBtn.svg')}}" alt="">

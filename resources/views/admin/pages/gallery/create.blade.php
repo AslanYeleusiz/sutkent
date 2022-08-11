@@ -38,10 +38,6 @@
         @csrf
         <div class="card-body">
             <div class="form-group">
-                <label for="title">Қысқаша сипаттама</label>
-                <input type="text" name="title" class="form-control" id="title" placeholder="Тақырыпты енгізіңіз..." required>
-            </div>
-            <div class="form-group">
                 <label for="image">Файлды жүктеу</label>
                 <div class="input-group">
                     <div class="custom-file">

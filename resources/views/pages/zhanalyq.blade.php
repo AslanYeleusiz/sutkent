@@ -15,7 +15,7 @@
         </div>
         <div style="background-image: url({{'/images/news/'.$new->image}})" class="news_material"></div>
         <div class="desc">
-            {{$new->description}}
+            <?php echo $new->description ?>
         </div>
     </div>
 </section>

@@ -32,6 +32,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
     /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
     Route::get('/', [MainController::class, 'index'])->name('home');
+    Route::post('/mail/send', [MainController::class, 'mailSend'])->name('mail.send');
     Route::get('/auyl', function () {
         return view('pages.auyl');
     });

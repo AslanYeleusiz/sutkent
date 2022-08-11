@@ -13,9 +13,11 @@
             <div class="f2">
                 <div class="head">@lang('site.Сайт картасы')</div>
                 <br>
-                <a href="{{LaravelLocalization::localizeUrl('/auyl')}}">@lang('site.Қор жайлы')</a>
-                <a href="#">@lang('site.Бағдарламалар')</a>
+                <a href="{{LaravelLocalization::localizeUrl('/auyl')}}">@lang('site.Ауыл жайлы')</a>
+                <a href="{{LaravelLocalization::localizeUrl('/akimshilik')}}">@lang('site.Әкімшілік')</a>
+                <a href="{{LaravelLocalization::localizeUrl('/gallery')}}">@lang('site.Галерея')</a>
                 <a href="{{LaravelLocalization::localizeUrl('/videos')}}">@lang('site.Бейнероликтер')</a>
+                <a href="{{LaravelLocalization::localizeUrl('/forum')}}">@lang('site.Форум')</a>
                 <a href="{{LaravelLocalization::localizeUrl('/bailanys')}}">@lang('site.Байланыс')</a>
             </div>
             <div class="f3">

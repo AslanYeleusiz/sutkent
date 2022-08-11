@@ -84,6 +84,9 @@ class ForumController extends Controller
      */
     public function destroy($id)
     {
-        //
+        forum::findOrFail($id)->delete();
+        return redirect()->route('forum.index')->with([
+            'message' => 'Форумнан жазба сәтті жойылды'
+        ]);
     }
 }

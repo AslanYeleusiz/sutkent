@@ -19,7 +19,7 @@
     </div><!-- /.container-fluid -->
 </div>
 <!-- /.content-header -->
-<div class="card card-primary">
+<div class="card card-primary pb-2">
     <div class="card-header">
         <h3 class="card-title">Суретті өзгерту</h3>
     </div>
@@ -39,10 +39,6 @@
         @csrf
         <div class="card-body">
             <div class="form-group">
-                <label for="title">Тақырыбы (қазақша)</label>
-                <input type="text" name="title" class="form-control" id="title" placeholder="Тақырыпты енгізіңіз..." value="{{$material->title}}">
-            </div>
-            <div class="form-group">
                 <label for="image">Файл жүктеу</label>
                 <div class="input-group">
                     <div class="custom-file">
@@ -60,16 +56,16 @@
     </form>
     <div class="p-2 w-50">
         <img src="{{asset('images/gallery/'.$material->img)}}" alt="">
+    </div>
         <form action="{{route('gallery.destroy',$material->id)}}" method="post" onSubmit="return window.confirm('Бұл материалды өшіруді растайсыз ба?');" style="display: inline">
            @method('DELETE')
             @csrf
-            <button type="submit" class="btn btn-danger mt-2 ml-2 px-5">
+            <button type="submit" class="btn btn-danger mt-1 ml-2 px-5">
                 <i class="fas fa-trash">
                 </i>
                 Өшіру
             </button>
         </form>
-    </div>
 </div>
 
 

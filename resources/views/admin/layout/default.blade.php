@@ -71,8 +71,13 @@
         </div>
         <!-- /.control-sidebar -->
     </div>
-    <!-- ./wrapper -->
-
+    <!-- ./ckEditor -->
+    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.ckeditor').ckeditor();
+        });
+    </script>
     <!-- jQuery -->
     <script src="{{asset('admin/plugins/jquery/jquery.min.js')}}"></script>
     <!-- jQuery UI 1.11.4 -->

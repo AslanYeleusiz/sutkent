@@ -17,9 +17,9 @@
                     </div>
                 </a>
                 <div class="body">
-                    <div class="title">
+                    <a href="{{'/zhanalyq/'.$new->lat_title.'-'.$new->id.'.html'}}" class="title">
                         {{$new->title}}
-                    </div>
+                    </a>
                     <div class="description">
                         {{$new->short_description}}
                     </div>

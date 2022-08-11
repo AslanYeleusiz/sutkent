@@ -7,6 +7,7 @@ $('.exitBtn').on('click', () => {
     $('.mb_menu_block').slideUp(300);
     $('.loginer').fadeOut(300);
     $('.popup').fadeOut(300);
+    $('.successPopup').fadeOut(300);
 });
 $('.menuBtn').on('click', () => {
     $('.mb_bg').fadeIn(300);
@@ -50,7 +51,7 @@ $('.loginBtn').on('click', () => {
 $('.suret').on('click', function () {
     $('.carousel-item').removeClass('active');
     $('.carousel-item').eq($(this).index()).addClass('active');
-    $('.popup').fadeIn(300);
+    $('.galleryPopup').fadeIn(300);
 });
 $('body').on('click','.popup',function (e) { // событие клика по веб-документу
     var div = $("#popup"); // тут указываем ID элемента
@@ -58,5 +59,21 @@ $('body').on('click','.popup',function (e) { // событие клика по �
         &&
         div.has(e.target).length === 0) { // и не по его дочерним элементам
         $('.popup').fadeOut(300);
+    }
+});
+$('body').on('click','.loginPopup',function (e) { // событие клика по веб-документу
+    var div = $("#loginPopup"); // тут указываем ID элемента
+    if (!div.is(e.target) // если клик был не по нашему блоку
+        &&
+        div.has(e.target).length === 0) { // и не по его дочерним элементам
+        $('.loginPopup').fadeOut(300);
+    }
+});
+$('body').on('click','.successPopup',function (e) { // событие клика по веб-документу
+    var div = $("#successPopup"); // тут указываем ID элемента
+    if (!div.is(e.target) // если клик был не по нашему блоку
+        &&
+        div.has(e.target).length === 0) { // и не по его дочерним элементам
+        $('.successPopup').fadeOut(300);
     }
 });

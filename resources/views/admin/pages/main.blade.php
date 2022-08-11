@@ -121,7 +121,7 @@
                                 {{$slider->index}}
                             </td>
                             <td>
-                                {{$slider->title}}
+                                {{$slider->kk_title}}
                             </td>
                             <td>
                                 {{$slider->image}}

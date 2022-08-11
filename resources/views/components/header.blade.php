@@ -59,10 +59,10 @@
                     </ul>
                 </div>
                 <a class="link-item" href="{{ LaravelLocalization::localizeUrl('/zhanalyqtar') }}">@lang('site.Жаңалықтар')</a>
-                <a class="link-item" href="#">@lang('site.Кітапхана')</a>
                 <a class="link-item" href="{{ LaravelLocalization::localizeUrl('/videos') }}">@lang('site.Бейнероликтер')</a>
                 <a class="link-item" href="{{ LaravelLocalization::localizeUrl('/forum') }}">@lang('site.Форум')</a>
                 <a class="link-item" href="{{ LaravelLocalization::localizeUrl('/gallery') }}">@lang('site.Галерея')</a>
+                <a class="link-item" href="{{ LaravelLocalization::localizeUrl('/bailanys') }}">@lang('site.Байланыс')</a>
             </div>
             <div class="right">
                 @if(LaravelLocalization::getCurrentLocale() == 'kk')

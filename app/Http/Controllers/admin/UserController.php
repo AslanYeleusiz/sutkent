@@ -52,14 +52,13 @@ class UserController extends Controller
             'name' => 'required',
             'phone' => 'required|unique:users',
             'password' => 'required|min:8',
-            'rank' => 'required',
-            'email' => 'required|email|unique:users',
             'gender' => 'required',
-            'image' => 'required|mimes:jpg,jpeg,png',
             'is_admin' => 'required'
         ], $messages);
         $rank = '';
         $filename = '';
+        $email = null;
+        if($request->email) $email=$request->email;
         if($request->rank) $rank=$request->rank;
         if($request->image){
             $uploadedFile = $request->file('image');
@@ -76,7 +75,7 @@ class UserController extends Controller
             'phone' => $request->phone,
             'password' => Hash::make($request->password),
             'rank' => $rank,
-            'email' => $request->email,
+            'email' => $email,
             'img' => $filename,
             'gender' => $request->gender,
             'is_admin' => $request->is_admin

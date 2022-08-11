@@ -57,11 +57,11 @@
 
             <div class="form-group">
                 <label for="kk_description">Сипаттамасын енгізіңіз (қазақша)</label>
-                <textarea type="text" name="kk_description" class="form-control" id="kk_description" placeholder="Қысқаша сипаттамасын енгізіңіз..." rows="9">{{$material->kk_description}}</textarea>
+                <textarea type="text" name="kk_description" class="ckeditor" id="kk_description" placeholder="Қысқаша сипаттамасын енгізіңіз..." rows="9">{{$material->kk_description}}</textarea>
             </div>
             <div class="form-group">
                 <label for="ru_description">Сипаттамасын енгізіңіз (орысша)</label>
-                <textarea type="text" name="ru_description" class="form-control" id="ru_description" placeholder="Қысқаша сипаттамасын енгізіңіз..." rows="9" >{{$material->ru_description}}</textarea>
+                <textarea type="text" name="ru_description" class="ckeditor" id="ru_description" placeholder="Қысқаша сипаттамасын енгізіңіз..." rows="9" >{{$material->ru_description}}</textarea>
             </div>
 
             <div class="form-group">
@@ -70,7 +70,7 @@
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" id="image" name="image" multiple onchange="$('#mime').text('Файл жүктелді');">
                         <input type="text" hidden name="last_image" id="" value="{{$material->image}}">
-                        <label id="mime" class="custom-file-label" for="image">Жаңа файл салу міндетті емес.</label>
+                        <label id="mime" class="custom-file-label" for="image">Сурет салу міндетті емес.</label>
                     </div>
                 </div>
             </div>

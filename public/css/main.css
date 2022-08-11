@@ -370,6 +370,7 @@ html {
     font-size: 18px;
     font-weight: 700;
     line-height: 25px;
+    color: #303030;
 }
 
 .main .news .news_block .description {
@@ -740,7 +741,7 @@ line-height: 27px;
 
 /*Forum*/
 .forum{
-
+    padding-bottom: 150px;
 }
 .forum .h{
     margin-top: 16px;
@@ -845,7 +846,8 @@ line-height: 41px;
 /*VIDEOS*/
 .video{
     padding-bottom: 200px;
-}.video .h{
+}
+.video .h{
     margin-top: 16px;
     text-align: center;
 }
@@ -920,6 +922,7 @@ margin-top: 18px;
     width: 100vw;
     height: 100vh;
     background: rgba(0,0,0,0.4);
+    z-index: 20;
 }
 .gallery .popup .container{
     position: relative;
@@ -954,7 +957,8 @@ margin-top: 18px;
     font-size: 24px;
     font-weight: 400;
     line-height: 40px;
-}.bailanys b{
+}
+.bailanys b{
     font-weight: 700;
 }
 .bailanys .karta .glassBtn{
@@ -963,11 +967,42 @@ margin-top: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-}.bailanys .karta img{
+}
+.bailanys .karta img{
     width: 100%;
 }
 
 
+/* SUCCESS POPUP*/
+.successPopup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 30;
+}
+.successPopup .block{
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    border-radius: 12px;
+    background: #ffffff;
+}
+.successPopup .exitBtn{
+    transform: translate(32px, -32px);
+    padding: 5px;
+}
+.successPopup .body{
+    width: 100%;
+    height: 100%;
+    padding: 50px 20px 50px;
+    text-align: center;
+    color: lightgreen;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 27px;
 
-
+}
 

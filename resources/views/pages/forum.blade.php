@@ -21,11 +21,7 @@
                @csrf
                 <input type="text" name="name" id="name" class="form-control cst_input" placeholder="@lang('site.Аты-жөніңіз')" required>
                 <textarea name="text" id="text" cols="30" rows="10" class="form-control cst_area" required></textarea>
-                @guest
-                <button type="button" class="cst_btn loginBtn">@lang('site.Жіберу')</button>
-                @else
                 <button type="submit" class="btn cst_btn">@lang('site.Жіберу')</button>
-                @endguest
             </form>
         </div>
     </div>
