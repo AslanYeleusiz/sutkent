@@ -87,7 +87,7 @@
                     <option value="2">@lang('site.Кәсіпкер')</option>
                     <option value="3">@lang('site.Ерікті')</option>
                 </select>
-                <button type="submit" class="btn btn-primary">@lang('site.Өтініш жіберу')</button>
+                <button name="sendMailBtn" type="submit" class="btn btn-primary">@lang('site.Өтініш жіберу')</button>
             </form>
         </div>
     </div>
