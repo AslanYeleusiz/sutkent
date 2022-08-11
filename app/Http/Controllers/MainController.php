@@ -196,7 +196,37 @@ class MainController extends Controller
         ]);
     }
     public function mailSend(Request $request) {
-
+        switch($request->investor){
+            case 0:
+                $type = 'Инвестор';
+                break;
+            case 1:
+                $type = 'Демеуші';
+                break;
+            case 2:
+                $type = 'Кәсіпкер';
+                break;
+            case 3:
+                $type = 'Ерікті';
+                break;
+        }
+        $headers[] = 'MIME-Version: 1.0';
+        $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+        $headers[] = 'To: newsutkent@gmail.com';
+        $headers[] = 'From: newsutkent@sutkent.kz';
+        $message = '
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>ItsolutionStuff.com</title>
+        </head>
+        <body>
+            <p>Аты-жөні: '.$request->name.'</p>
+            <p>Телефоны: '.$request->phone.'</p>
+            <p>Тип: '.$type.'</p>
+        </body>
+        </html>';
+        mail('newsutkent@gmail.com', 'sutkent.kz', $message, implode("\r\n", $headers));
     }
 
 
