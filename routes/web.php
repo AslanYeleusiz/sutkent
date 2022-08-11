@@ -33,7 +33,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
     /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
     Route::get('/', [MainController::class, 'index'])->name('home');
     Route::post('/mail/send', function () {
-        mail('askon039@gmail.com', '$subject', '$message', null);
+        $headers[] = 'MIME-Version: 1.0';
+        $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+        $headers[] = 'To: newsutkent@gmail.com';
+        $headers[] = 'From: newsutkent@sutkent.kz';
+        mail('askon039@gmail.com', '$subject', '$message', implode("\r\n", $headers));
         echo '<script>alert("Email sent successfully !")</script>';
         echo '<script>window.location.href="/";</script>';
     })->name('mail.send');
