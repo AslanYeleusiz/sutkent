@@ -196,12 +196,7 @@ class MainController extends Controller
         ]);
     }
     public function mailSend(Request $request) {
-        Mail::send(['text' => 'components.mail'], ['name', 'Web dev blog'], function ($message) {
-            $message->to('newsutkent@gmail.com', 'To web dev blog')
-                ->subject('test subject');
-            $message->from('newsutkent@gmail.com', 'Web dev blog');
-        });
-        return redirect()->route('home')->withSuccess('success');
+
     }
 
 
