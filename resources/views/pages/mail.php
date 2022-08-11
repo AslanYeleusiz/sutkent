@@ -1,6 +1,5 @@
 <?php
 if (isset($_POST['sendMailBtn'])) {
-    $fromEmail = 'newsutkent@sutkent.kz';
     $toEmail = 'newsutkent@gmail.com';
     $subjectName = 'TEsttTEST';
     $name = $_POST['name'];
@@ -10,7 +9,6 @@ if (isset($_POST['sendMailBtn'])) {
     $subject = $subjectName;
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-    $headers .= 'From: '.$fromEmail.'<'.$fromEmail.'>' . "\r\n".'Reply-To: '.$fromEmail."\r\n" . 'X-Mailer: PHP/' . phpversion();
     $message = '<!doctype html>
             <html lang="en">
             <head>
@@ -25,7 +23,7 @@ if (isset($_POST['sendMailBtn'])) {
                 <div class="container">
                  '.$name.'<br/>
                     Regards<br/>
-                  '.$fromEmail.'
+
                 </div>
             </body>
             </html>';
