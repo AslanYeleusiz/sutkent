@@ -227,6 +227,7 @@ class MainController extends Controller
         </body>
         </html>';
         mail('newsutkent@gmail.com', 'sutkent.kz', $message, implode("\r\n", $headers));
+        return redirect()->route('home')->withSuccess('success');
     }
 
 
