@@ -83,7 +83,7 @@
                @csrf
                 <input type="text" name="name" id="name" class="form-control" placeholder="@lang('site.Аты-жөніңіз')" required>
                 <input type="text" name="phone" id="phone" class="form-control phone_musk" placeholder="@lang('site.Телефон нөміріңіз')" required>
-                <select name="investor" id="investor" class="form-control">
+                <select name="investor" id="investor" class="form-select">
                     <option value="0">@lang('site.Инвестор')</option>
                     <option value="1">@lang('site.Демеуші')</option>
                     <option value="2">@lang('site.Кәсіпкер')</option>
