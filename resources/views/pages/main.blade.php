@@ -78,8 +78,7 @@
             <div class="desc">
                 @lang('site.Егер ауылымыздың дамуына үлес қосқыңыз келсе, өтініш қалдырыңыз, біздің қызметкерлер сізге жақын арада хабарласады')
             </div>
-            <form method="post" action="{{route('mail.send')}}" class="form">
-               @csrf
+            <form method="post" action="mail.php" class="form">
                 <input type="text" name="name" id="name" class="form-control" placeholder="@lang('site.Аты-жөніңіз')">
                 <input type="text" name="phone" id="phone" class="form-control phone_musk" placeholder="@lang('site.Телефон нөміріңіз')">
                 <select name="investor" id="investor" class="form-control">
