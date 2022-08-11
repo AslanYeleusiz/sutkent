@@ -1,4 +1,5 @@
 @extends('layouts.default')
+@section('links')<link rel="canonical" href="https://sutkent.kz/kk/forum">@endsection
 @section('title', 'Форум')
 
 @section('content')

@@ -1,5 +1,6 @@
 @extends('layouts.default')
 @section('title', $kenes)
+@section('links')<link rel="canonical" href="https://sutkent.kz/kk/{{$lat}}">@endsection
 
 @section('content')
 

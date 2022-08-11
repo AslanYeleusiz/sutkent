@@ -61,7 +61,6 @@ class MainController extends Controller
             'sliders' => $sliders
         ]);
     }
-
     public function videos() {
         $videos = videos::orderBy('created_at','desc')->paginate(12);
         if(app()->getLocale() === 'kk'){
@@ -91,7 +90,8 @@ class MainController extends Controller
             $video->description = $video->ru_description;
         }
         return view('pages.video')->with([
-            'video' => $video
+            'video' => $video,
+            'lat' => $slug
         ]);
     }
     public function news() {
@@ -115,7 +115,6 @@ class MainController extends Controller
             'news' => $news
         ]);
     }
-
     public function new_block($slug, $id) {
         $new = news::findOrFail($id);
         if(app()->getLocale() === 'kk'){
@@ -128,10 +127,10 @@ class MainController extends Controller
             $new->description = $new->ru_description;
         }
         return view('pages.zhanalyq')->with([
-            'new' => $new
+            'new' => $new,
+            'lat' => $slug
         ]);
     }
-
     public function akimshilik() {
         $users = $this->kenes(1);
         return view('pages.akimshilik')->with([
@@ -142,35 +141,40 @@ class MainController extends Controller
         $users = $this->kenes(2);
         return view('pages.kenes')->with([
             'users' => $users,
-            'kenes' => __('site.Ардагерлер кеңесі')
+            'kenes' => __('site.Ардагерлер кеңесі'),
+            'lat' => 'ardagerler-kenesi'
         ]);
     }
     public function qogam() {
         $users = $this->kenes(3);
         return view('pages.kenes')->with([
             'users' => $users,
-            'kenes' => __('site.Қоғамдық мүшелері')
+            'kenes' => __('site.Қоғамдық мүшелері'),
+            'lat' => 'qoghamdyq-musheler'
         ]);
     }
     public function analar() {
         $users = $this->kenes(4);
         return view('pages.kenes')->with([
             'users' => $users,
-            'kenes' => __('site.Аналар кеңесі')
+            'kenes' => __('site.Аналар кеңесі'),
+            'lat' => 'analar-kenesi'
         ]);
     }
     public function mediator() {
         $users = $this->kenes(5);
         return view('pages.kenes')->with([
             'users' => $users,
-            'kenes' => __('site.Медиатор')
+            'kenes' => __('site.Медиатор'),
+            'lat' => 'mediator'
         ]);
     }
     public function khor() {
         $users = $this->kenes(6);
         return view('pages.kenes')->with([
             'users' => $users,
-            'kenes' => __('site.Қоғамдық қор мүшелері')
+            'kenes' => __('site.Қоғамдық қор мүшелері'),
+            'lat' => 'qoghamdyq-khor-musheler'
         ]);
     }
     public function forum() {

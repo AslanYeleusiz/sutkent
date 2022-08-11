@@ -1,4 +1,6 @@
 @extends('layouts.default')
+@section('links')<link rel="canonical" href="https://sutkent.kz/kk/bailanys">@endsection
+
 @section('content')
 
 <section class="bailanys">
@@ -18,7 +20,7 @@
             </div>
             <div class="karta">
                 <img src="{{asset('images/karta.jpg')}}" alt="">
-                <a href="#" class="btn glassBtn">@lang('site.Картаны ашу')</a>
+                <a target="_blank" href="https://goo.gl/maps/xVT7pHZN94GZssai9" class="btn glassBtn">@lang('site.Картаны ашу')</a>
             </div>
 
         </div>

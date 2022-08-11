@@ -1,5 +1,6 @@
 @extends('layouts.default')
 @section('title', 'Әкімшілік')
+@section('links')<link rel="canonical" href="https://sutkent.kz/kk/akimshilik">@endsection
 
 @section('content')
 

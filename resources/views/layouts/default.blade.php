@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title') | Сүткент</title>
-    <link rel="icon" type="image/x-icon" href="{{asset('images/favicon.png')}}">
-
+    <meta name="description" content="Сүткент ауылының ресми сайты. Ауылдың барлық тыныс-тіршілігімен танысыңыз!">
+    <meta name="keywords" content="Сүткент, ауыл, ауыл шаруашылығы, Шардара, Түркістан облысы, суткент, sutkent, ауылдастар, село, Сүткент ауылы, село Суткент">
+    <title>@yield('title') | Сүткент ауылы</title>
+    <link rel="icon" type="image/png" href="{{asset('images/favicon.png')}}">
+    @yield('links')
     <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/media.css') }}">

@@ -236,6 +236,9 @@
     .forum .block {
     padding: 75px 0 103px;
 }
+    .akim .admins {
+    grid-gap: 60px 45px;
+}
 
 }
 
@@ -361,11 +364,6 @@
         grid-gap: 40px 40px;
     }
 
-    .akim .admins img {
-        padding-right: 20px;
-        width: 173px;
-    }
-
     .akim {
         font-size: 14px;
         line-height: 19px;
@@ -398,6 +396,16 @@
 }
     .forum .block {
     padding: 59px 0 79px;
+}
+    .akim .admins .img {
+    width: 173px;
+    height: 219px;
+    margin-right: 35px;
+    background-position: 50% 50%;
+    background-size: auto 100%;
+}
+    .akim .admins {
+    grid-gap: 40px 15px;
 }
 }
 
@@ -577,9 +585,11 @@
         margin-top: 24px;
     }
 
-    .akim .admins img {
+    .akim .admins .img {
         padding: 0;
         width: 300px;
+        height: 400px;
+        margin-right: 0;
     }
 
     .akim {
@@ -697,9 +707,8 @@
         line-height: 16px;
     }
 
-    .akim .admins img {
+    .akim .admins .img {
         padding: 0;
-        width: 50vw;
     }
 .video .sam_video .iframe {
     height: 63vw;
@@ -730,6 +739,9 @@
     .forum .block .desc {
     font-size: 15px;
     line-height: 17px;
+}
+    .akim .admins {
+    grid-gap: 46px 56px;
 }
 }
 
@@ -773,7 +785,9 @@
     font-size: 14px;
     line-height: 16px;
 }
-
+.akim .admins {
+    grid-gap: 0px 56px;
+}
 }
 
 @media all and (max-width: 380px) {

@@ -724,6 +724,7 @@ line-height: 27px;
     margin-right: 35px;
     background-position: 50% 50%;
     background-size: auto 100%;
+    background-repeat: no-repeat;
 }
 .akim .admins .block .body{
     display: flex;

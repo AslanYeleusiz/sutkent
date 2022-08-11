@@ -1,4 +1,6 @@
 @extends('layouts.default')
+@section('links')<link rel="canonical" href="https://sutkent.kz/kk/video/{{$lat}}">@endsection
+
 @section('title', $video->title.' | Бейнероликтер')
 
 @section('content')
@@ -6,7 +8,7 @@
 <div class="video">
     <div class="container">
         <div class="hleb">
-            <a href="{{ LaravelLocalization::localizeUrl('/') }}">@lang('site.Басты бет')</a> / <a href="{{ LaravelLocalization::localizeUrl('/videos') }}">@lang('site.Бейнероликтер')</a> / Ауылдықтар 1000 тал екті
+            <a href="{{ LaravelLocalization::localizeUrl('/') }}">@lang('site.Басты бет')</a> / <a href="{{ LaravelLocalization::localizeUrl('/videos') }}">@lang('site.Бейнероликтер')</a> / {{$video->title}}
         </div>
         <div class="h">{{$video->title}}</div>
         <div class="sam_video">

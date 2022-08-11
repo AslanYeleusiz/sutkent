@@ -1,4 +1,5 @@
 @extends('layouts.default')
+@section('links')<link rel="canonical" href="https://sutkent.kz/kk">@endsection
 @section('title', 'Басты бет')
 
 @section('content')
@@ -80,8 +81,8 @@
             </div>
             <form method="post" action="{{route('mail.send')}}" class="form">
                @csrf
-                <input type="text" name="name" id="name" class="form-control" placeholder="@lang('site.Аты-жөніңіз')">
-                <input type="text" name="phone" id="phone" class="form-control phone_musk" placeholder="@lang('site.Телефон нөміріңіз')">
+                <input type="text" name="name" id="name" class="form-control" placeholder="@lang('site.Аты-жөніңіз')" required>
+                <input type="text" name="phone" id="phone" class="form-control phone_musk" placeholder="@lang('site.Телефон нөміріңіз')" required>
                 <select name="investor" id="investor" class="form-control">
                     <option value="0">@lang('site.Инвестор')</option>
                     <option value="1">@lang('site.Демеуші')</option>
