@@ -28,6 +28,11 @@
                     </button>
                     <ul class="dropdown-menu">
                         <li>
+                            <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl('/auyl') }}">
+                                @lang('site.Ауыл жайлы')
+                            </a>
+                        </li>
+                        <li>
                             <a class="dropdown-item" href="{{ LaravelLocalization::localizeUrl('/akimshilik') }}">
                                 @lang('site.Әкімшілік')
                             </a>
