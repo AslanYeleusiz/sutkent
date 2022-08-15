@@ -62,7 +62,7 @@ class MediatorController extends Controller
             'img' => $filename,
             'type' => 5,
         ]);
-        return redirect()->route('mediator.index')->with('message', 'Әкімшілік сәтті жүктелді!');
+        return redirect()->route('mediator.index')->with('message', 'Медиатор - жазба сәтті жүктелді!');
     }
 
     /**
@@ -121,7 +121,7 @@ class MediatorController extends Controller
             'ru_rank' => $request->ru_rank,
             'img' => $filename,
         ]);
-        return redirect()->route('akimshilik.index')->with('message', 'Медиатор сәтті өзгертілді!');
+        return redirect()->route('akimshilik.index')->with('message', 'Медиатор - жазба сәтті өзгертілді!');
     }
 
     /**
@@ -135,6 +135,6 @@ class MediatorController extends Controller
         $user = akimshilik::findOrFail($id);
         Storage::disk('images')->delete('kenes/avatar/'.$user->img);
         $user->delete();
-        return redirect()->route('mediator.index')->with('message', 'Жазба сәтті жойылды!');
+        return redirect()->route('mediator.index')->with('message', 'Медиатор - жазба сәтті жойылды!');
     }
 }

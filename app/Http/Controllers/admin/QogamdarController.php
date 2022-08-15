@@ -63,7 +63,7 @@ class QogamdarController extends Controller
             'img' => $filename,
             'type' => 3,
         ]);
-        return redirect()->route('qogamdar.index')->with('message', 'Әкімшілік сәтті жүктелді!');
+        return redirect()->route('qogamdar.index')->with('message', 'Қоғамдық мүшелер - жазба сәтті жүктелді!');
     }
 
     /**
@@ -122,7 +122,7 @@ class QogamdarController extends Controller
             'ru_rank' => $request->ru_rank,
             'img' => $filename,
         ]);
-        return redirect()->route('akimshilik.index')->with('message', 'Қоғамдық мүшелер сәтті өзгертілді!');
+        return redirect()->route('akimshilik.index')->with('message', 'Қоғамдық мүшелер - жазба сәтті өзгертілді!');
     }
 
     /**
@@ -136,6 +136,6 @@ class QogamdarController extends Controller
         $user = akimshilik::findOrFail($id);
         Storage::disk('images')->delete('kenes/avatar/'.$user->img);
         $user->delete();
-        return redirect()->route('qogamdar.index')->with('message', 'Жазба сәтті жойылды!');
+        return redirect()->route('qogamdar.index')->with('message', 'Қоғамдық мүшелер - жазба сәтті жойылды!');
     }
 }

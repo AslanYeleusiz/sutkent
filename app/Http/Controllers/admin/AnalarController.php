@@ -63,7 +63,7 @@ class AnalarController extends Controller
             'img' => $filename,
             'type' => 4,
         ]);
-        return redirect()->route('analar.index')->with('message', 'Әкімшілік сәтті жүктелді!');
+        return redirect()->route('analar.index')->with('message', 'Аналар кеңесі - жазба сәтті жүктелді!');
     }
 
     /**
@@ -122,7 +122,7 @@ class AnalarController extends Controller
             'ru_rank' => $request->ru_rank,
             'img' => $filename,
         ]);
-        return redirect()->route('akimshilik.index')->with('message', 'Аналар кеңесі сәтті өзгертілді!');
+        return redirect()->route('akimshilik.index')->with('message', 'Аналар кеңесі - жазба сәтті өзгертілді!');
     }
 
 
@@ -137,6 +137,6 @@ class AnalarController extends Controller
         $user = akimshilik::findOrFail($id);
         Storage::disk('images')->delete('kenes/avatar/'.$user->img);
         $user->delete();
-        return redirect()->route('analar.index')->with('message', 'Жазба сәтті жойылды!');
+        return redirect()->route('analar.index')->with('message', 'Аналар кеңесі - жазба сәтті жойылды!');
     }
 }

@@ -3,9 +3,9 @@
 <div class="container">
     <section class="auyl">
         <div class="hleb">
-            <a href="{{ LaravelLocalization::localizeUrl('/') }}">Басты бет</a> / Ауыл жайлы
+            <a href="{{ LaravelLocalization::localizeUrl('/') }}">@lang('site.Басты бет')</a> / @lang('site.Ауыл жайлы')
         </div>
-        <div class="h">Ауыл жайлы</div>
+        <div class="h">@lang('site.Ауыл жайлы')</div>
         <div class="about">
             <div class="wrap">
                 <div class="photo">

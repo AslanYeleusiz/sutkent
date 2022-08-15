@@ -62,7 +62,7 @@ class ArdagerController extends Controller
             'img' => $filename,
             'type' => 2,
         ]);
-        return redirect()->route('ardagerler.index')->with('message', 'Әкімшілік сәтті жүктелді!');
+        return redirect()->route('ardagerler.index')->with('message', 'Ардагерлер кеңесі - жазба сәтті жүктелді!');
     }
 
     /**
@@ -121,7 +121,7 @@ class ArdagerController extends Controller
             'ru_rank' => $request->ru_rank,
             'img' => $filename,
         ]);
-        return redirect()->route('akimshilik.index')->with('message', 'Ардагерлер кеңесі сәтті өзгертілді!');
+        return redirect()->route('akimshilik.index')->with('message', 'Ардагерлер кеңесі - жазба сәтті өзгертілді!');
     }
 
     /**
@@ -135,6 +135,6 @@ class ArdagerController extends Controller
         $user = akimshilik::findOrFail($id);
         Storage::disk('images')->delete('kenes/avatar/'.$user->img);
         $user->delete();
-        return redirect()->route('ardagerler.index')->with('message', 'Жазба сәтті жойылды!');
+        return redirect()->route('ardagerler.index')->with('message', 'Ардагерлер кеңесі - жазба сәтті жойылды!');
     }
 }

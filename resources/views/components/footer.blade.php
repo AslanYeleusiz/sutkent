@@ -2,7 +2,7 @@
     <div class="container">
         <div class="wrap">
             <div class="f1">
-                <img src="{{asset('images/logoFooter.svg')}}" alt="">
+                <a href="{{ LaravelLocalization::localizeUrl('/') }}"><img src="{{asset('images/logoFooter.svg')}}" alt=""></a>
                 <div class="span">@lang('site.Сүткент ауылының') <br>@lang('site.ресми сайты')</div>
                 <div class="seti a-c">
                     <a href="https://www.facebook.com/profile.php?id=100025379105480"><img src="{{asset('images/social/w_facebook.svg')}}" alt=""></a>

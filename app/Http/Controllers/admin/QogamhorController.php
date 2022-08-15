@@ -62,7 +62,7 @@ class QogamhorController extends Controller
             'img' => $filename,
             'type' => 6,
         ]);
-        return redirect()->route('qogamhor.index')->with('message', 'Әкімшілік сәтті жүктелді!');
+        return redirect()->route('qogamhor.index')->with('message', 'Қоғамдық қор мүшелері - жазба сәтті жүктелді!');
     }
 
     /**
@@ -121,7 +121,7 @@ class QogamhorController extends Controller
             'ru_rank' => $request->ru_rank,
             'img' => $filename,
         ]);
-        return redirect()->route('akimshilik.index')->with('message', 'Қоғамдық қор мүшелері сәтті өзгертілді!');
+        return redirect()->route('akimshilik.index')->with('message', 'Қоғамдық қор мүшелері - жазба сәтті өзгертілді!');
     }
 
     /**
@@ -135,6 +135,6 @@ class QogamhorController extends Controller
         $user = akimshilik::findOrFail($id);
         Storage::disk('images')->delete('kenes/avatar/'.$user->img);
         $user->delete();
-        return redirect()->route('qogamhor.index')->with('message', 'Жазба сәтті жойылды!');
+        return redirect()->route('qogamhor.index')->with('message', 'Қоғамдық қор мүшелері - жазба сәтті жойылды!');
     }
 }

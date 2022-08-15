@@ -7,7 +7,7 @@
 <section class="video">
     <div class="container">
         <div class="hleb">
-            <a href="{{ LaravelLocalization::localizeUrl('/') }}">@lang('site.Басты бет')</a> / @lang('site.Бейнероликтер') / page 1
+            <a href="{{ LaravelLocalization::localizeUrl('/') }}">@lang('site.Басты бет')</a> / @lang('site.Бейнероликтер')
         </div>
         <div class="h">@lang('site.Бейнероликтер')</div>
         <div class="wrap">

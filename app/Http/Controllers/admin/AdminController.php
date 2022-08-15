@@ -75,14 +75,14 @@ class AdminController extends Controller
             'ru_title' => $request->ru_title,
             'image' => $filename,
         ]);
-        return redirect()->route('admin.index')->with('message','Галлереяға мәлімет сәтті өзгертілді.');
+        return redirect()->route('admin.index')->with('message','Слайдер мәліметі сәтті өзгертілді.');
     }
     public function destroySlider($id)
     {
         $slider = slider::findOrFail($id);
         Storage::disk('images')->delete('slide/'.$slider->image);
         $slider->delete();
-        return redirect()->route('admin.index')->with('message','Галлереяға мәлімет сәтті жойылды.');
+        return redirect()->route('admin.index')->with('message','Слайдер мәліметі сәтті жойылды.');
     }
 
 

@@ -7,7 +7,7 @@
 <section class="forum">
     <div class="container">
         <div class="hleb">
-            <a href="{{ LaravelLocalization::localizeUrl('/') }}">@lang('site.Басты бет')</a> / @lang('site.Форум') / Форум 0035 - @lang('site.Ауыл әкімшілігіне талап-тілек, ұсыныс')
+            <a href="{{ LaravelLocalization::localizeUrl('/') }}">@lang('site.Басты бет')</a> / @lang('site.Форум')
         </div>
         <div class="h">Форум</div>
     </div>

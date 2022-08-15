@@ -31,7 +31,7 @@
     </div>
     <div class="container">
         <div class="hleb">
-            <a href="{{ LaravelLocalization::localizeUrl('/') }}">@lang('site.Басты бет')</a> / @lang('site.Галерея') / page 1
+            <a href="{{ LaravelLocalization::localizeUrl('/') }}">@lang('site.Басты бет')</a> / @lang('site.Галерея')
         </div>
         <div class="h">@lang('site.Галерея')</div>
         <div class="wrap">
