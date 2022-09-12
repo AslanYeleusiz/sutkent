@@ -37,10 +37,9 @@ class AuthController extends Controller
         ]);
         $credentials = $request->only('phone', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->route('home')
-                        ->withSuccess('Signed in');
+            return redirect()->route('home');
         }
-        return redirect("/")->withSuccess('Login details are not valid');
+        return redirect("/");
     }
 
     public function logout() {
